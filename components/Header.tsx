@@ -9,7 +9,7 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="bg-brand-black text-brand-white sticky top-0 z-50 shadow-lg">
+    <header className="bg-white text-gray-900 sticky top-0 z-50 shadow-sm border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -17,9 +17,9 @@ export default function Header() {
             <Image
               src="/images/logo.png"
               alt="Autoricambi Rabita"
-              height={50}
-              width={120}
-              style={{ objectFit: "contain" }}
+              height={40}
+              width={80}
+              className="h-10 w-auto"
               priority
             />
           </Link>
@@ -30,7 +30,7 @@ export default function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-sm font-medium text-gray-300 hover:text-brand-yellow transition-colors"
+                className="text-sm font-medium text-gray-700 hover:text-brand-yellow transition-colors"
               >
                 {link.label}
               </Link>
@@ -49,7 +49,7 @@ export default function Header() {
 
             {/* Hamburger */}
             <button
-              className="md:hidden p-2 rounded-md text-gray-400 hover:text-brand-yellow"
+              className="md:hidden p-2 rounded-md text-gray-600 hover:text-brand-yellow"
               onClick={() => setMenuOpen(!menuOpen)}
               aria-label="Apri menu"
             >
@@ -61,13 +61,13 @@ export default function Header() {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="md:hidden bg-[#111111] border-t border-gray-800">
+        <div className="md:hidden bg-white border-t border-gray-200">
           <div className="px-4 py-3 space-y-1">
             {NAV_LINKS.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="block py-2 text-sm font-medium text-gray-300 hover:text-brand-yellow transition-colors"
+                className="block py-2 text-sm font-medium text-gray-700 hover:text-brand-yellow transition-colors"
                 onClick={() => setMenuOpen(false)}
               >
                 {link.label}
