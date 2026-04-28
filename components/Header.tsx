@@ -41,7 +41,7 @@ export default function Header() {
           <div className="flex items-center gap-4">
             <a
               href={`tel:${PHONE_NUMBER.replace(/\s/g, "")}`}
-              className="hidden sm:flex items-center gap-2 bg-brand-yellow text-brand-black font-semibold text-sm px-3 py-2 rounded-md hover:bg-yellow-400 transition-colors"
+              className="hidden sm:flex items-center gap-2 bg-brand-yellow text-white font-semibold text-sm px-3 py-2 rounded-md hover:opacity-90 transition-colors"
             >
               <PhoneIcon />
               {PHONE_NUMBER}
@@ -75,7 +75,7 @@ export default function Header() {
             ))}
             <a
               href={`tel:${PHONE_NUMBER.replace(/\s/g, "")}`}
-              className="flex items-center gap-2 mt-3 bg-brand-yellow text-brand-black font-semibold text-sm px-3 py-2 rounded-md w-fit"
+              className="flex items-center gap-2 mt-3 bg-brand-yellow text-white font-semibold text-sm px-3 py-2 rounded-md w-fit hover:opacity-90 transition-colors"
             >
               <PhoneIcon />
               {PHONE_NUMBER}

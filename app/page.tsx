@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { WHATSAPP_URL, CITY, FULL_ADDRESS, PHONE_NUMBER } from "@/lib/constants";
+import Recensioni from "@/components/Recensioni";
 
 export const metadata: Metadata = {
   title: "Autoricambi Rabita – Ricambi Auto a Barrafranca, Enna, Sicilia",
@@ -62,12 +63,12 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_rgba(232,32,26,0.08),_transparent_60%)]" />
         <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-36 text-center">
           <span className="inline-block bg-brand-yellow/10 border border-brand-yellow/30 text-brand-yellow text-xs font-semibold px-3 py-1 rounded-full mb-6 uppercase tracking-widest">
-            {CITY} – Enna – Sicilia
+            Barrafranca e Piazza Armerina
           </span>
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-brand-white leading-tight mb-6">
             Ricambi auto a{" "}
-            <span className="text-brand-yellow">Barrafranca</span>
-            <br className="hidden sm:block" /> – disponibili subito
+            <span className="text-brand-yellow">Barrafranca e Piazza Armerina</span>
+            <br className="hidden sm:block" />, disponibili subito
             <br className="hidden sm:block" /> o su ordinazione
           </h1>
           <p className="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto mb-10">
@@ -164,6 +165,9 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Recensioni */}
+      <Recensioni />
+
       {/* Filiali */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <h2 className="text-3xl font-bold text-brand-white text-center mb-12">
@@ -218,12 +222,12 @@ export default function HomePage() {
       </section>
 
       {/* CTA finale */}
-      <section className="bg-[#111111] border-t border-gray-800">
+      <section className="bg-brand-yellow">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
-          <h2 className="text-3xl font-bold text-brand-white mb-4">
+          <h2 className="text-3xl font-bold text-white mb-4">
             Hai bisogno di un ricambio?
           </h2>
-          <p className="text-gray-400 mb-8">
+          <p className="text-white/80 mb-8">
             Compila il modulo sul sito o scrivici direttamente su WhatsApp. Ti
             risponderemo nel minor tempo possibile.
           </p>
@@ -239,7 +243,7 @@ export default function HomePage() {
             </a>
             <Link
               href="/cerca-ricambio"
-              className="inline-flex items-center justify-center border border-brand-yellow text-brand-yellow hover:bg-brand-yellow hover:text-white font-bold px-8 py-4 rounded-xl transition-all"
+              className="inline-flex items-center justify-center border-2 border-white text-white hover:bg-white hover:text-brand-yellow font-bold px-8 py-4 rounded-xl transition-all"
             >
               Usa il modulo
             </Link>
