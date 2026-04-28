@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { WHATSAPP_URL, CITY, FULL_ADDRESS, PHONE_NUMBER } from "@/lib/constants";
+import { WHATSAPP_URL, FULL_ADDRESS, PHONE_NUMBER } from "@/lib/constants";
 import Recensioni from "@/components/Recensioni";
 
 export const metadata: Metadata = {
