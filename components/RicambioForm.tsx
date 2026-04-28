@@ -104,7 +104,7 @@ export default function RicambioForm() {
         />
       </div>
       <div>
-        <label className="block text-sm font-medium text-gray-300 mb-1">
+        <label className="block text-sm font-medium text-gray-700 mb-1">
           Messaggio / Ricambio cercato
         </label>
         <textarea
@@ -112,7 +112,7 @@ export default function RicambioForm() {
           placeholder="Descrivi il ricambio che cerchi o eventuali dettagli aggiuntivi..."
           value={form.messaggio}
           onChange={(e) => handleChange("messaggio", e.target.value)}
-          className="w-full bg-[#111111] border border-gray-700 rounded-lg px-4 py-3 text-brand-white placeholder-gray-600 focus:outline-none focus:border-brand-yellow transition-colors text-sm resize-none"
+          className="w-full bg-white border border-gray-300 rounded-lg px-4 py-3 text-gray-900 placeholder-gray-400 focus:outline-none focus:border-brand-yellow transition-colors text-sm resize-none"
         />
       </div>
 
@@ -139,17 +139,17 @@ interface FieldProps {
 function Field({ label, placeholder, value, error, type = "text", onChange }: FieldProps) {
   return (
     <div>
-      <label className="block text-sm font-medium text-gray-300 mb-1">{label}</label>
+      <label className="block text-sm font-medium text-gray-700 mb-1">{label}</label>
       <input
         type={type}
         placeholder={placeholder}
         value={value}
         onChange={(e) => onChange(e.target.value)}
-        className={`w-full bg-[#111111] border rounded-lg px-4 py-3 text-brand-white placeholder-gray-600 focus:outline-none focus:border-brand-yellow transition-colors text-sm ${
-          error ? "border-red-500" : "border-gray-700"
+        className={`w-full bg-white border rounded-lg px-4 py-3 text-gray-900 placeholder-gray-400 focus:outline-none focus:border-brand-yellow transition-colors text-sm ${
+          error ? "border-red-500" : "border-gray-300"
         }`}
       />
-      {error && <p className="mt-1 text-xs text-red-400">{error}</p>}
+      {error && <p className="mt-1 text-xs text-red-500">{error}</p>}
     </div>
   );
 }

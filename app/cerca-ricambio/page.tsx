@@ -23,7 +23,7 @@ export default function CercaRicambioPage() {
         </p>
       </div>
 
-      <div className="bg-[#222222] border border-gray-800 rounded-2xl p-8">
+      <div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm">
         <RicambioForm />
       </div>
 
