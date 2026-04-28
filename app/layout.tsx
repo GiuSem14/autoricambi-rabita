@@ -16,13 +16,6 @@ export const metadata: Metadata = {
     "ricambi Enna",
     "autoricambi Rabita",
   ],
-  icons: {
-    icon: [
-      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
-      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
-    ],
-    apple: '/apple-touch-icon.png',
-  },
   openGraph: {
     title: "Autoricambi Rabita – Ricambi Auto a Barrafranca",
     description: "Ricambi auto disponibili subito o su ordinazione a Barrafranca (EN). Risposta rapida via WhatsApp.",
