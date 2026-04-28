@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import RicambioForm from "@/components/RicambioForm";
 
 export const metadata: Metadata = {
-  title: "Cerca Ricambio – Autoricambi Saitta | Piazza Armerina",
+  title: "Cerca Ricambio – Autoricambi Rabita | Barrafranca",
   description:
-    "Compila il modulo per cercare un ricambio auto a Piazza Armerina. Marca, modello, anno: ti risponderemo su WhatsApp anche in giornata. Autoricambi Saitta.",
+    "Compila il modulo per cercare un ricambio auto a Barrafranca. Marca, modello, anno: ti risponderemo su WhatsApp anche in giornata. Autoricambi Rabita.",
 };
 
 export default function CercaRicambioPage() {

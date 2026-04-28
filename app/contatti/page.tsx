@@ -12,9 +12,9 @@ import {
 } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Contatti – Autoricambi Saitta | Piazza Armerina, Enna",
+  title: "Contatti – Autoricambi Rabita | Barrafranca, Enna",
   description:
-    "Contatta Autoricambi Saitta a Piazza Armerina (EN): telefono, WhatsApp, indirizzo e orari. Ricambi auto disponibili subito o su ordinazione.",
+    "Contatta Autoricambi Rabita a Barrafranca (EN): telefono, WhatsApp, indirizzo e orari. Ricambi auto disponibili subito o su ordinazione.",
 };
 
 export default function ContattiPage() {
@@ -46,7 +46,7 @@ export default function ContattiPage() {
             titolo="Telefono fisso"
             contenuto={
               <a
-                href="tel:0935682960"
+                href="tel:0934464038"
                 className="hover:text-brand-yellow transition-colors"
               >
                 {PHONE_NUMBER}
@@ -58,7 +58,7 @@ export default function ContattiPage() {
             titolo="Cellulare"
             contenuto={
               <a
-                href="tel:+393801575950"
+                href="tel:+393505011449"
                 className="hover:text-brand-yellow transition-colors"
               >
                 {MOBILE_NUMBER}
@@ -161,14 +161,14 @@ export default function ContattiPage() {
       {/* Google Maps */}
       <div className="rounded-2xl overflow-hidden border border-gray-800">
         <iframe
-          src="https://maps.google.com/maps?q=Via+Giosuè+Carducci+7,+Piazza+Armerina,+EN&output=embed"
+          src="https://maps.google.com/maps?q=Via+dello+Stadio+46,+Barrafranca,+EN&output=embed"
           width="100%"
           height="400"
           style={{ border: 0 }}
           allowFullScreen
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
-          title="Autoricambi Saitta – Via Giosuè Carducci 7, Piazza Armerina"
+          title="Autoricambi Rabita – Via dello Stadio 46, Barrafranca"
         />
       </div>
     </div>

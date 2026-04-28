@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { BUSINESS_NAME, FULL_ADDRESS, EMAIL, PHONE_NUMBER } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy – Autoricambi Saitta",
+  title: "Privacy Policy – Autoricambi Rabita",
   description:
-    "Informativa sul trattamento dei dati personali ai sensi del Regolamento UE 2016/679 (GDPR) – Autoricambi Saitta, Piazza Armerina.",
+    "Informativa sul trattamento dei dati personali ai sensi del Regolamento UE 2016/679 (GDPR) – Autoricambi Rabita, Barrafranca.",
   robots: { index: false },
 };
 

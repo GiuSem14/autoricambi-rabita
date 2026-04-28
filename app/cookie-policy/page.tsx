@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import OpenCookieManagerButton from "@/components/OpenCookieManagerButton";
 
 export const metadata: Metadata = {
-  title: "Cookie Policy – Autoricambi Saitta",
+  title: "Cookie Policy – Autoricambi Rabita",
   description:
-    "Informativa sull'uso dei cookie del sito Autoricambi Saitta ai sensi del Regolamento UE 2016/679 e del D.Lgs. 196/2003.",
+    "Informativa sull'uso dei cookie del sito Autoricambi Rabita ai sensi del Regolamento UE 2016/679 e del D.Lgs. 196/2003.",
   robots: { index: false },
 };
 
@@ -31,19 +31,19 @@ const COOKIES: {
     categoria: "Statistici",
     colore: "text-blue-400",
     descrizione:
-      "Utilizzati da Google Analytics 4 per misurare il numero di visite e il comportamento degli utenti su autoricambisaitta.it. I dati sono aggregati e anonimi.",
+      "Utilizzati da Google Analytics 4 per misurare il numero di visite e il comportamento degli utenti su autoricambirabita.it. I dati sono aggregati e anonimi.",
     voci: [
       {
         nome: "_ga",
         tipo: "Statistico",
-        finalita: "Google Analytics 4 — distingue gli utenti unici su autoricambisaitta.it",
+        finalita: "Google Analytics 4 — distingue gli utenti unici su autoricambirabita.it",
         durata: "2 anni",
         fonte: "Google LLC",
       },
       {
         nome: "_ga_LQC7VH9WWC",
         tipo: "Statistico",
-        finalita: "Google Analytics 4 — mantiene lo stato della sessione su autoricambisaitta.it",
+        finalita: "Google Analytics 4 — mantiene lo stato della sessione su autoricambirabita.it",
         durata: "2 anni",
         fonte: "Google LLC",
       },

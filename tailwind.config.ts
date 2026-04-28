@@ -12,9 +12,10 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
         brand: {
-          black: "#1A1A1A",
-          yellow: "#F5C518",
+          black: "#0D1B4B",
+          yellow: "#E8201A",
           white: "#FFFFFF",
+          blue: "#1B3A8C",
         },
       },
     },

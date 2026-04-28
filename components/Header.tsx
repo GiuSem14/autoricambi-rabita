@@ -16,7 +16,7 @@ export default function Header() {
           <Link href="/" className="flex-shrink-0">
             <Image
               src="/images/logo.png"
-              alt="Autoricambi Saitta"
+              alt="Autoricambi Rabita"
               height={50}
               width={120}
               style={{ objectFit: "contain" }}

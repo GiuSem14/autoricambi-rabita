@@ -3,9 +3,9 @@ import Link from "next/link";
 import { WHATSAPP_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Categorie Ricambi – Autoricambi Saitta | Piazza Armerina",
+  title: "Categorie Ricambi – Autoricambi Rabita | Barrafranca",
   description:
-    "Scopri le categorie di ricambi auto disponibili presso Autoricambi Saitta a Piazza Armerina: motore, freni, carrozzeria, elettronica e molto altro.",
+    "Scopri le categorie di ricambi auto disponibili presso Autoricambi Rabita a Barrafranca: motore, freni, carrozzeria, elettronica e molto altro.",
 };
 
 const CATEGORIE = [

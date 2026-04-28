@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { BUSINESS_NAME, CITY, WHATSAPP_URL, ORARI } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Chi Siamo – Autoricambi Saitta | Piazza Armerina",
+  title: "Chi Siamo – Autoricambi Rabita | Barrafranca",
   description:
-    "Scopri chi siamo: Autoricambi Saitta a Piazza Armerina (EN). Anni di esperienza nel settore dei ricambi auto, con competenza e disponibilità.",
+    "Scopri chi siamo: Autoricambi Rabita a Barrafranca (EN). Anni di esperienza nel settore dei ricambi auto, con competenza e disponibilità.",
 };
 
 export default function ChiSiamoPage() {
@@ -17,22 +16,14 @@ export default function ChiSiamoPage() {
           La nostra storia
         </span>
         <h1 className="text-4xl font-extrabold text-brand-white mt-2 mb-6">
-          Una storia di famiglia al servizio della tua auto
+          Il tuo punto di riferimento per i ricambi auto
         </h1>
-        <Image
-          src="/images/negozio-esterno.jpg"
-          alt="Esterno del negozio Autoricambi Saitta"
-          width={1920}
-          height={1080}
-          className="rounded-lg w-full h-auto mb-8"
-          priority
-        />
         <div className="space-y-5 text-gray-300 text-lg leading-relaxed max-w-3xl">
           <p>
-            <strong className="text-brand-white">{BUSINESS_NAME}</strong> non è solo
-            un negozio, è una tradizione che attraversa generazioni. Da oltre 50 anni,
-            l&apos;esperienza maturata da Enrico e suo padre rappresenta la massima garanzia
-            per chi cerca competenza e affidabilità a {CITY} e in tutta la provincia di Enna.
+            <strong className="text-brand-white">{BUSINESS_NAME}</strong> è da anni il punto
+            di riferimento per i ricambi auto a {CITY} e nella provincia di Enna.
+            Offriamo un vasto assortimento di ricambi nuovi per tutte le marche e modelli,
+            disponibili subito o ordinabili anche in giornata.
           </p>
           <p>
             Che si tratti di un veicolo europeo, giapponese o americano, il nostro
@@ -48,18 +39,10 @@ export default function ChiSiamoPage() {
         </div>
       </div>
 
-      <Image
-        src="/images/negozio-interno.jpg"
-        alt="Interno del negozio Autoricambi Saitta"
-        width={1920}
-        height={1080}
-        className="rounded-lg w-full h-auto mb-14"
-      />
-
       {/* Valori */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-16">
         {[
-          { titolo: "Una Tradizione di Famiglia", desc: "Oltre 50 anni di passione ed esperienza trasmessi di padre in figlio. Siamo il punto di riferimento nel settore dei ricambi auto.", icona: "🏅" },
+          { titolo: "Punto di Riferimento", desc: "Da anni siamo il punto di riferimento per i ricambi auto a Barrafranca e nella provincia di Enna.", icona: "🏅" },
           { titolo: "Risposte in Tempo Reale", desc: "Il tuo tempo è prezioso. Ricevi assistenza su WhatsApp in meno di un'ora e spediamo i tuoi ordini nella stessa giornata.", icona: "⚡" },
           { titolo: "Supporto Tecnico Dedicato", desc: "Niente errori, solo il pezzo giusto. Ti guidiamo nella scelta del ricambio esatto per il tuo veicolo, garantendoti compatibilità totale.", icona: "🔍" },
         ].map((v) => (
@@ -95,7 +78,7 @@ export default function ChiSiamoPage() {
         </a>
         <Link
           href="/contatti"
-          className="inline-flex items-center justify-center border border-brand-yellow text-brand-yellow hover:bg-brand-yellow hover:text-brand-black font-bold px-6 py-3 rounded-xl transition-all"
+          className="inline-flex items-center justify-center border border-brand-yellow text-brand-yellow hover:bg-brand-yellow hover:text-white font-bold px-6 py-3 rounded-xl transition-all"
         >
           Dove siamo
         </Link>

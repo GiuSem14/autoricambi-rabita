@@ -1,21 +1,19 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { WHATSAPP_URL, CITY } from "@/lib/constants";
-import Recensioni from "@/components/Recensioni";
 
 export const metadata: Metadata = {
-  title: "Autoricambi Saitta – Ricambi Auto a Piazza Armerina, Enna, Sicilia",
+  title: "Autoricambi Rabita – Ricambi Auto a Barrafranca, Enna, Sicilia",
   description:
-    "Ricambi auto nuovi a Piazza Armerina. Disponibili subito o su ordinazione. Risposta rapida via WhatsApp. Autoricambi Saitta – Piazza Armerina, Enna.",
+    "Ricambi auto nuovi a Barrafranca. Disponibili subito o su ordinazione. Risposta rapida via WhatsApp. Autoricambi Rabita – Barrafranca, Enna.",
 };
 
 const SERVIZI = [
   {
     icon: "🏅",
-    titolo: "Una Tradizione di Famiglia",
+    titolo: "Punto di Riferimento",
     descrizione:
-      "Oltre 50 anni di passione ed esperienza trasmessi di padre in figlio. Siamo il punto di riferimento nel settore dei ricambi auto.",
+      "Da anni siamo il punto di riferimento per i ricambi auto a Barrafranca e nella provincia di Enna.",
   },
   {
     icon: "⚡",
@@ -42,15 +40,15 @@ export default function HomePage() {
     <>
       {/* Hero */}
       <section className="relative bg-brand-black overflow-hidden min-h-[500px] md:min-h-[600px] flex items-center">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_rgba(245,197,24,0.08),_transparent_60%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_rgba(232,32,26,0.08),_transparent_60%)]" />
         <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-36 text-center">
           <span className="inline-block bg-brand-yellow/10 border border-brand-yellow/30 text-brand-yellow text-xs font-semibold px-3 py-1 rounded-full mb-6 uppercase tracking-widest">
             {CITY} – Enna – Sicilia
           </span>
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-brand-white leading-tight mb-6">
             Ricambi auto a{" "}
-            <span className="text-brand-yellow">Piazza Armerina</span>
-            <br className="hidden sm:block" /> subito disponibili
+            <span className="text-brand-yellow">Barrafranca</span>
+            <br className="hidden sm:block" /> – disponibili subito
             <br className="hidden sm:block" /> o su ordinazione
           </h1>
           <p className="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto mb-10">
@@ -69,7 +67,7 @@ export default function HomePage() {
             </a>
             <Link
               href="/cerca-ricambio"
-              className="inline-flex items-center justify-center bg-brand-yellow hover:bg-yellow-400 text-brand-black font-bold px-8 py-4 rounded-xl text-lg transition-all shadow-lg"
+              className="inline-flex items-center justify-center bg-brand-yellow hover:opacity-90 text-white font-bold px-8 py-4 rounded-xl text-lg transition-all shadow-lg"
             >
               Cerca il tuo ricambio
             </Link>
@@ -80,11 +78,11 @@ export default function HomePage() {
       {/* Badge fiducia */}
       <section className="bg-brand-yellow">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="grid grid-cols-3 divide-x divide-yellow-400/40">
+          <div className="grid grid-cols-3 divide-x divide-red-400/40">
             {BADGES.map((b) => (
               <div key={b.label} className="text-center px-4">
-                <div className="text-3xl font-extrabold text-brand-black">{b.valore}</div>
-                <div className="text-sm font-medium text-brand-black/70 mt-1">{b.label}</div>
+                <div className="text-3xl font-extrabold text-white">{b.valore}</div>
+                <div className="text-sm font-medium text-white/70 mt-1">{b.label}</div>
               </div>
             ))}
           </div>
@@ -94,16 +92,6 @@ export default function HomePage() {
       {/* About */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="flex flex-col md:flex-row gap-10 items-center">
-          <div className="w-full md:w-[60%]">
-            <Image
-              src="/images/negozio-interno.jpg"
-              alt="Interno del negozio Autoricambi Saitta"
-              width={1920}
-              height={1080}
-              className="rounded-lg w-full h-auto"
-              priority
-            />
-          </div>
           <div className="w-full md:w-[40%]">
             <span className="text-brand-yellow text-sm font-semibold uppercase tracking-widest">
               Chi siamo
@@ -113,22 +101,22 @@ export default function HomePage() {
             </h2>
             <div className="space-y-4 text-gray-400 text-base leading-relaxed">
               <p>
-                Autoricambi Saitta è il punto di riferimento per i ricambi auto a Piazza Armerina
-                con oltre 50 anni di esperienza tra Enrico e suo padre. Trovi ricambi nuovi per tutte le marche e modelli,
-                disponibili subito o ordinabili anche in giornata.
+                Autoricambi Rabita è il punto di riferimento per i ricambi auto a
+                Barrafranca e nella provincia di Enna. Trovi ricambi nuovi per tutte
+                le marche e modelli, disponibili subito o ordinabili anche in giornata.
               </p>
               <p>
-                Enrico e il suo team ti accolgono con competenza e cordialità, aiutandoti a
+                Il nostro team ti accoglie con competenza e cordialità, aiutandoti a
                 trovare il pezzo giusto anche quando è di difficile reperibilità.
               </p>
               <p>
-                Vieni a trovarci in Via Giosuè Carducci 7, oppure scrivici su WhatsApp: ti
+                Vieni a trovarci in Via dello Stadio 46, oppure scrivici su WhatsApp: ti
                 rispondiamo entro un&apos;ora.
               </p>
             </div>
             <Link
               href="/chi-siamo"
-              className="inline-flex items-center gap-2 mt-8 text-brand-yellow font-semibold text-sm hover:text-yellow-300 transition-colors"
+              className="inline-flex items-center gap-2 mt-8 text-brand-yellow font-semibold text-sm hover:opacity-80 transition-colors"
             >
               Scopri di più →
             </Link>
@@ -157,9 +145,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Recensioni */}
-      <Recensioni />
-
       {/* CTA finale */}
       <section className="bg-[#111111] border-t border-gray-800">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
@@ -182,7 +167,7 @@ export default function HomePage() {
             </a>
             <Link
               href="/cerca-ricambio"
-              className="inline-flex items-center justify-center border border-brand-yellow text-brand-yellow hover:bg-brand-yellow hover:text-brand-black font-bold px-8 py-4 rounded-xl transition-all"
+              className="inline-flex items-center justify-center border border-brand-yellow text-brand-yellow hover:bg-brand-yellow hover:text-white font-bold px-8 py-4 rounded-xl transition-all"
             >
               Usa il modulo
             </Link>
