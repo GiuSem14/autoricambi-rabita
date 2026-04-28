@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { WHATSAPP_URL, CITY } from "@/lib/constants";
+import { WHATSAPP_URL, CITY, FULL_ADDRESS, PHONE_NUMBER } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Autoricambi Rabita – Ricambi Auto a Barrafranca, Enna, Sicilia",
@@ -26,6 +26,25 @@ const SERVIZI = [
     titolo: "Supporto Tecnico Dedicato",
     descrizione:
       "Niente errori, solo il pezzo giusto. Ti guidiamo nella scelta del ricambio esatto per il tuo veicolo, garantendoti compatibilità totale.",
+  },
+];
+
+const FILIALI = [
+  {
+    nome: "Autoricambi Rabita – Barrafranca",
+    indirizzo: FULL_ADDRESS,
+    telefono: PHONE_NUMBER,
+    orari: null as string | null,
+    mapsEmbed: "https://maps.google.com/maps?q=Via+dello+Stadio+46,+Barrafranca,+EN&output=embed",
+    mapsLink: "https://maps.google.com/?q=Via+dello+Stadio,+46,+Barrafranca,+EN",
+  },
+  {
+    nome: "Autoricambi Rabita – Piazza Armerina",
+    indirizzo: "Via Alessandro Manzoni, 143, 94015 Piazza Armerina (EN)",
+    telefono: PHONE_NUMBER,
+    orari: "Lun – Sab, fino alle 19:00",
+    mapsEmbed: "https://maps.google.com/maps?q=Via+Alessandro+Manzoni+143+Piazza+Armerina&output=embed",
+    mapsLink: "https://maps.google.com/?q=Via+Alessandro+Manzoni+143+Piazza+Armerina",
   },
 ];
 
@@ -145,6 +164,59 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Filiali */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <h2 className="text-3xl font-bold text-brand-white text-center mb-12">
+          Le Nostre <span className="text-brand-yellow">Filiali</span>
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {FILIALI.map((f) => (
+            <div
+              key={f.nome}
+              className="bg-[#111111] border border-gray-800 rounded-2xl overflow-hidden hover:border-brand-yellow/40 transition-colors"
+            >
+              <div className="h-52">
+                <iframe
+                  src={f.mapsEmbed}
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title={`Mappa ${f.nome}`}
+                />
+              </div>
+              <div className="p-6 space-y-3">
+                <h3 className="text-brand-white font-bold text-lg">{f.nome}</h3>
+                <a
+                  href={f.mapsLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-start gap-2 text-gray-400 text-sm hover:text-brand-yellow transition-colors group"
+                >
+                  <MapPinIcon />
+                  <span className="group-hover:underline">{f.indirizzo}</span>
+                </a>
+                <a
+                  href={`tel:${f.telefono.replace(/\s/g, "")}`}
+                  className="flex items-center gap-2 text-gray-400 text-sm hover:text-brand-yellow transition-colors"
+                >
+                  <PhoneSmallIcon />
+                  {f.telefono}
+                </a>
+                {f.orari && (
+                  <div className="flex items-center gap-2 text-gray-400 text-sm">
+                    <ClockIcon />
+                    {f.orari}
+                  </div>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* CTA finale */}
       <section className="bg-[#111111] border-t border-gray-800">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
@@ -175,6 +247,31 @@ export default function HomePage() {
         </div>
       </section>
     </>
+  );
+}
+
+function MapPinIcon() {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+    </svg>
+  );
+}
+
+function PhoneSmallIcon() {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+    </svg>
+  );
+}
+
+function ClockIcon() {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+    </svg>
   );
 }
 
