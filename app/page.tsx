@@ -11,19 +11,19 @@ export const metadata: Metadata = {
 
 const SERVIZI = [
   {
-    icon: "🏅",
+    Icon: AwardServIcon,
     titolo: "Punto di Riferimento",
     descrizione:
       "Da anni siamo il punto di riferimento per i ricambi auto a Barrafranca e nella provincia di Enna.",
   },
   {
-    icon: "⚡",
+    Icon: ZapServIcon,
     titolo: "Risposte in Tempo Reale",
     descrizione:
       "Il tuo tempo è prezioso. Ricevi assistenza su WhatsApp in meno di un'ora e spediamo i tuoi ordini nella stessa giornata.",
   },
   {
-    icon: "🔍",
+    Icon: SearchServIcon,
     titolo: "Supporto Tecnico Dedicato",
     descrizione:
       "Niente errori, solo il pezzo giusto. Ti guidiamo nella scelta del ricambio esatto per il tuo veicolo, garantendoti compatibilità totale.",
@@ -49,10 +49,25 @@ const FILIALI = [
   },
 ];
 
-const BADGES = [
-  { label: "Anni di esperienza", valore: "50+" },
-  { label: "Risposta rapida", valore: "< 1h" },
-  { label: "Ricambio trovato in giornata", valore: "✓" },
+const STATS = [
+  {
+    valore: "50+",
+    label: "Anni di esperienza",
+    sub: "nel settore dei ricambi auto",
+    Icon: TrophyStatIcon,
+  },
+  {
+    valore: "< 1h",
+    label: "Risposta su WhatsApp",
+    sub: "per ogni richiesta inviata",
+    Icon: ClockStatIcon,
+  },
+  {
+    valore: "✓",
+    label: "Ricambio trovato",
+    sub: "disponibile subito o in giornata",
+    Icon: CheckStatIcon,
+  },
 ];
 
 export default function HomePage() {
@@ -68,7 +83,7 @@ export default function HomePage() {
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-brand-white leading-tight mb-6">
             Ricambi auto a{" "}
             <span className="text-brand-yellow">Barrafranca e Piazza Armerina</span>
-            <br className="hidden sm:block" />, disponibili subito
+            <br className="hidden sm:block" /> disponibili subito
             <br className="hidden sm:block" /> o su ordinazione
           </h1>
           <p className="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto mb-10">
@@ -95,14 +110,23 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Badge fiducia */}
-      <section className="bg-brand-yellow">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="grid grid-cols-3 divide-x divide-red-400/40">
-            {BADGES.map((b) => (
-              <div key={b.label} className="text-center px-4">
-                <div className="text-3xl font-extrabold text-white">{b.valore}</div>
-                <div className="text-sm font-medium text-white/70 mt-1">{b.label}</div>
+      {/* Statistiche */}
+      <section className="bg-[#091035] border-y border-white/5">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+            {STATS.map(({ valore, label, sub, Icon }) => (
+              <div
+                key={label}
+                className="bg-brand-blue/10 border border-brand-yellow/15 rounded-2xl px-8 py-10 flex flex-col items-center text-center hover:border-brand-yellow/40 transition-colors"
+              >
+                <div className="w-14 h-14 rounded-xl bg-brand-yellow/10 flex items-center justify-center text-brand-yellow mb-6">
+                  <Icon />
+                </div>
+                <div className="text-5xl sm:text-6xl font-extrabold text-brand-white mb-3 leading-none tracking-tight">
+                  {valore}
+                </div>
+                <div className="text-brand-white font-semibold text-base mb-1">{label}</div>
+                <div className="text-gray-500 text-sm">{sub}</div>
               </div>
             ))}
           </div>
@@ -155,7 +179,9 @@ export default function HomePage() {
               key={s.titolo}
               className="bg-[#222222] border border-gray-800 rounded-2xl p-8 hover:border-brand-yellow/40 transition-colors group"
             >
-              <div className="text-4xl mb-4">{s.icon}</div>
+              <div className="w-10 h-10 bg-brand-yellow/10 rounded-xl flex items-center justify-center text-brand-yellow mb-4">
+                <s.Icon />
+              </div>
               <h3 className="text-xl font-semibold text-brand-white group-hover:text-brand-yellow transition-colors mb-3">
                 {s.titolo}
               </h3>
@@ -251,6 +277,63 @@ export default function HomePage() {
         </div>
       </section>
     </>
+  );
+}
+
+function AwardServIcon() {
+  return (
+    <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round">
+      <circle cx="12" cy="8" r="7"/>
+      <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/>
+    </svg>
+  );
+}
+
+function ZapServIcon() {
+  return (
+    <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round">
+      <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+    </svg>
+  );
+}
+
+function SearchServIcon() {
+  return (
+    <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round">
+      <circle cx="11" cy="11" r="8"/>
+      <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+    </svg>
+  );
+}
+
+function TrophyStatIcon() {
+  return (
+    <svg className="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round">
+      <path d="M6 4h12v6a6 6 0 0 1-12 0V4z" />
+      <path d="M4 5H6M18 5h2" />
+      <path d="M4 5v2.5A2.5 2.5 0 0 0 6.5 10" />
+      <path d="M20 5v2.5A2.5 2.5 0 0 1 17.5 10" />
+      <path d="M12 16v4" />
+      <path d="M8 20h8" />
+    </svg>
+  );
+}
+
+function ClockStatIcon() {
+  return (
+    <svg className="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round">
+      <circle cx="12" cy="12" r="9" />
+      <path d="M12 7v5l3.5 2" />
+    </svg>
+  );
+}
+
+function CheckStatIcon() {
+  return (
+    <svg className="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round">
+      <path d="M12 2 4 6v6c0 5.25 3.5 10.15 8 11.35C16.5 22.15 20 17.25 20 12V6l-8-4z" />
+      <path d="m9 12 2 2 4-4" />
+    </svg>
   );
 }
 

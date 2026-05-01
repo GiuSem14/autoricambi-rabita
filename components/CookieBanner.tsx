@@ -4,6 +4,14 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { getCookiePreferences, saveCookiePreferences } from "./CookieManager";
 
+function ShieldPrivacyIcon() {
+  return (
+    <svg className="w-4 h-4 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
+      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+    </svg>
+  );
+}
+
 export default function CookieBanner() {
   const [visible, setVisible] = useState(false);
 
@@ -37,8 +45,9 @@ export default function CookieBanner() {
       <div className="max-w-4xl mx-auto bg-[#1e1e1e] border border-gray-700 rounded-2xl shadow-2xl p-5 sm:p-6">
         <div className="flex flex-col sm:flex-row sm:items-center gap-4">
           <div className="flex-1 min-w-0">
-            <p className="text-brand-white text-sm font-medium mb-1">
-              🍪 Utilizziamo i cookie
+            <p className="text-brand-white text-sm font-medium mb-1 flex items-center gap-2">
+              <ShieldPrivacyIcon />
+              Utilizziamo i cookie
             </p>
             <p className="text-gray-400 text-xs leading-relaxed">
               Usiamo i cookie per migliorare la tua esperienza di navigazione.

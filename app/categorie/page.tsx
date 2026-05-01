@@ -9,13 +9,13 @@ export const metadata: Metadata = {
 };
 
 const CATEGORIE = [
-  { nome: "Motore e trasmissione", icona: "⚙️", esempi: "Cinghie, filtri, pompe acqua, olio, giunti" },
-  { nome: "Freni e sospensioni", icona: "🛞", esempi: "Dischi, pastiglie, ammortizzatori, molle" },
-  { nome: "Carrozzeria e vetri", icona: "🚗", esempi: "Paraurti, specchietti, portiere, parabrezza" },
-  { nome: "Impianto elettrico", icona: "⚡", esempi: "Alternatori, motorini, sensori, batterie" },
-  { nome: "Scarico e raffreddamento", icona: "🌡️", esempi: "Radiatori, tubi, marmitta, catalizzatori" },
-  { nome: "Illuminazione", icona: "💡", esempi: "Fari, fanali, lampade, frecce" },
-  { nome: "Accessori", icona: "🎁", esempi: "Copri sedili, copri sterzo, tappeti, caschi" },
+  { nome: "Motore e trasmissione", Icon: WrenchCatIcon, esempi: "Cinghie, filtri, pompe acqua, olio, giunti" },
+  { nome: "Freni e sospensioni", Icon: DiscCatIcon, esempi: "Dischi, pastiglie, ammortizzatori, molle" },
+  { nome: "Carrozzeria e vetri", Icon: CarCatIcon, esempi: "Paraurti, specchietti, portiere, parabrezza" },
+  { nome: "Impianto elettrico", Icon: ZapCatIcon, esempi: "Alternatori, motorini, sensori, batterie" },
+  { nome: "Scarico e raffreddamento", Icon: ThermCatIcon, esempi: "Radiatori, tubi, marmitta, catalizzatori" },
+  { nome: "Illuminazione", Icon: LightCatIcon, esempi: "Fari, fanali, lampade, frecce" },
+  { nome: "Accessori", Icon: BoxCatIcon, esempi: "Copri sedili, copri sterzo, tappeti, caschi" },
 ];
 
 export default function CategoriePage() {
@@ -34,16 +34,18 @@ export default function CategoriePage() {
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-        {CATEGORIE.map((cat) => (
+        {CATEGORIE.map(({ nome, Icon, esempi }) => (
           <div
-            key={cat.nome}
+            key={nome}
             className="bg-[#222222] border border-gray-800 rounded-2xl p-6 hover:border-brand-yellow/40 transition-colors group"
           >
-            <div className="text-4xl mb-3">{cat.icona}</div>
+            <div className="w-10 h-10 bg-brand-yellow/10 rounded-xl flex items-center justify-center text-brand-yellow mb-3">
+              <Icon />
+            </div>
             <h2 className="text-base font-semibold text-brand-white group-hover:text-brand-yellow transition-colors mb-2">
-              {cat.nome}
+              {nome}
             </h2>
-            <p className="text-gray-500 text-xs leading-relaxed">{cat.esempi}</p>
+            <p className="text-gray-500 text-xs leading-relaxed">{esempi}</p>
           </div>
         ))}
       </div>
@@ -74,5 +76,73 @@ export default function CategoriePage() {
         </div>
       </div>
     </div>
+  );
+}
+
+function WrenchCatIcon() {
+  return (
+    <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round">
+      <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+    </svg>
+  );
+}
+
+function DiscCatIcon() {
+  return (
+    <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round">
+      <circle cx="12" cy="12" r="10"/>
+      <circle cx="12" cy="12" r="3"/>
+      <line x1="12" y1="2" x2="12" y2="9"/>
+      <line x1="12" y1="15" x2="12" y2="22"/>
+      <line x1="2" y1="12" x2="9" y2="12"/>
+      <line x1="15" y1="12" x2="22" y2="12"/>
+    </svg>
+  );
+}
+
+function CarCatIcon() {
+  return (
+    <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round">
+      <path d="M5 11.5L7.5 7h9L19 11.5"/>
+      <path d="M2 11.5h20v5a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-5z"/>
+      <circle cx="7" cy="18" r="1.5"/>
+      <circle cx="17" cy="18" r="1.5"/>
+    </svg>
+  );
+}
+
+function ZapCatIcon() {
+  return (
+    <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round">
+      <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+    </svg>
+  );
+}
+
+function ThermCatIcon() {
+  return (
+    <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round">
+      <path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/>
+    </svg>
+  );
+}
+
+function LightCatIcon() {
+  return (
+    <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round">
+      <line x1="9" y1="18" x2="15" y2="18"/>
+      <line x1="10" y1="22" x2="14" y2="22"/>
+      <path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14"/>
+    </svg>
+  );
+}
+
+function BoxCatIcon() {
+  return (
+    <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round">
+      <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+      <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+      <line x1="12" y1="22.08" x2="12" y2="12"/>
+    </svg>
   );
 }

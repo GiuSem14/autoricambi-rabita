@@ -117,9 +117,10 @@ export default function ContattiPage() {
             ))}
           </ul>
           <div className="mt-6 pt-6 border-t border-gray-800 rounded-xl p-4 bg-brand-yellow/5 border border-brand-yellow/20">
-            <p className="text-brand-yellow text-sm font-medium">
-              💬 Fuori orario? Lascia un messaggio su WhatsApp e ti richiamiamo appena possibile.
-            </p>
+            <div className="flex items-start gap-2 text-brand-yellow text-sm font-medium">
+              <MessageIcon />
+              <span>Fuori orario? Lascia un messaggio su WhatsApp e ti richiamiamo appena possibile.</span>
+            </div>
           </div>
         </div>
       </div>
@@ -194,6 +195,14 @@ function ContactCard({
         <div className="text-gray-400 text-sm">{contenuto}</div>
       </div>
     </div>
+  );
+}
+
+function MessageIcon() {
+  return (
+    <svg className="w-4 h-4 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
+      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+    </svg>
   );
 }
 

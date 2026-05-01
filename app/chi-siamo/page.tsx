@@ -8,6 +8,24 @@ export const metadata: Metadata = {
     "Scopri chi siamo: Autoricambi Rabita a Barrafranca (EN). Anni di esperienza nel settore dei ricambi auto, con competenza e disponibilità.",
 };
 
+const VALORI = [
+  {
+    titolo: "Punto di Riferimento",
+    desc: "Da anni siamo il punto di riferimento per i ricambi auto a Barrafranca e nella provincia di Enna.",
+    Icon: AwardValIcon,
+  },
+  {
+    titolo: "Risposte in Tempo Reale",
+    desc: "Il tuo tempo è prezioso. Ricevi assistenza su WhatsApp in meno di un'ora e spediamo i tuoi ordini nella stessa giornata.",
+    Icon: ZapValIcon,
+  },
+  {
+    titolo: "Supporto Tecnico Dedicato",
+    desc: "Niente errori, solo il pezzo giusto. Ti guidiamo nella scelta del ricambio esatto per il tuo veicolo, garantendoti compatibilità totale.",
+    Icon: SearchValIcon,
+  },
+];
+
 export default function ChiSiamoPage() {
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -41,15 +59,13 @@ export default function ChiSiamoPage() {
 
       {/* Valori */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-16">
-        {[
-          { titolo: "Punto di Riferimento", desc: "Da anni siamo il punto di riferimento per i ricambi auto a Barrafranca e nella provincia di Enna.", icona: "🏅" },
-          { titolo: "Risposte in Tempo Reale", desc: "Il tuo tempo è prezioso. Ricevi assistenza su WhatsApp in meno di un'ora e spediamo i tuoi ordini nella stessa giornata.", icona: "⚡" },
-          { titolo: "Supporto Tecnico Dedicato", desc: "Niente errori, solo il pezzo giusto. Ti guidiamo nella scelta del ricambio esatto per il tuo veicolo, garantendoti compatibilità totale.", icona: "🔍" },
-        ].map((v) => (
-          <div key={v.titolo} className="bg-[#222222] border border-gray-800 rounded-2xl p-6">
-            <div className="text-3xl mb-3">{v.icona}</div>
-            <h3 className="text-brand-white font-semibold text-lg mb-2">{v.titolo}</h3>
-            <p className="text-gray-400 text-sm">{v.desc}</p>
+        {VALORI.map(({ titolo, desc, Icon }) => (
+          <div key={titolo} className="bg-[#222222] border border-gray-800 rounded-2xl p-6">
+            <div className="w-10 h-10 bg-brand-yellow/10 rounded-xl flex items-center justify-center text-brand-yellow mb-3">
+              <Icon />
+            </div>
+            <h3 className="text-brand-white font-semibold text-lg mb-2">{titolo}</h3>
+            <p className="text-gray-400 text-sm">{desc}</p>
           </div>
         ))}
       </div>
@@ -84,5 +100,31 @@ export default function ChiSiamoPage() {
         </Link>
       </div>
     </div>
+  );
+}
+
+function AwardValIcon() {
+  return (
+    <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round">
+      <circle cx="12" cy="8" r="7"/>
+      <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/>
+    </svg>
+  );
+}
+
+function ZapValIcon() {
+  return (
+    <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round">
+      <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+    </svg>
+  );
+}
+
+function SearchValIcon() {
+  return (
+    <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round">
+      <circle cx="11" cy="11" r="8"/>
+      <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+    </svg>
   );
 }
