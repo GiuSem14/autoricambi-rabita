@@ -49,26 +49,6 @@ const FILIALI = [
   },
 ];
 
-const STATS = [
-  {
-    valore: "50+",
-    label: "Anni di esperienza",
-    sub: "nel settore dei ricambi auto",
-    Icon: TrophyStatIcon,
-  },
-  {
-    valore: "< 1h",
-    label: "Risposta su WhatsApp",
-    sub: "per ogni richiesta inviata",
-    Icon: ClockStatIcon,
-  },
-  {
-    valore: "✓",
-    label: "Ricambio trovato",
-    sub: "disponibile subito o in giornata",
-    Icon: CheckStatIcon,
-  },
-];
 
 export default function HomePage() {
   return (
@@ -110,22 +90,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Statistiche */}
-      <section className="bg-brand-yellow">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
-          <div className="flex flex-row">
-            {STATS.map(({ valore, label }, i) => (
-              <div
-                key={label}
-                className={`flex-1 flex flex-col items-center justify-center text-center py-1 ${i < STATS.length - 1 ? "border-r border-white/20" : ""}`}
-              >
-                <div className="text-4xl font-extrabold text-white leading-none">{valore}</div>
-                <div className="text-white/80 text-sm mt-1">{label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* About */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
@@ -243,7 +207,7 @@ export default function HomePage() {
 
       {/* CTA finale */}
       <section className="bg-brand-yellow">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
             Hai bisogno di un ricambio?
           </h2>
@@ -300,36 +264,6 @@ function SearchServIcon() {
   );
 }
 
-function TrophyStatIcon() {
-  return (
-    <svg className="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round">
-      <path d="M6 4h12v6a6 6 0 0 1-12 0V4z" />
-      <path d="M4 5H6M18 5h2" />
-      <path d="M4 5v2.5A2.5 2.5 0 0 0 6.5 10" />
-      <path d="M20 5v2.5A2.5 2.5 0 0 1 17.5 10" />
-      <path d="M12 16v4" />
-      <path d="M8 20h8" />
-    </svg>
-  );
-}
-
-function ClockStatIcon() {
-  return (
-    <svg className="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round">
-      <circle cx="12" cy="12" r="9" />
-      <path d="M12 7v5l3.5 2" />
-    </svg>
-  );
-}
-
-function CheckStatIcon() {
-  return (
-    <svg className="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round">
-      <path d="M12 2 4 6v6c0 5.25 3.5 10.15 8 11.35C16.5 22.15 20 17.25 20 12V6l-8-4z" />
-      <path d="m9 12 2 2 4-4" />
-    </svg>
-  );
-}
 
 function MapPinIcon() {
   return (
