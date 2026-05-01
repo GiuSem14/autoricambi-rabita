@@ -127,32 +127,32 @@ export default function ContattiPage() {
 
       {/* Servizi, Accessibilità, Pagamenti */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
-        <div className="bg-white border border-gray-200 rounded-2xl p-6">
-          <h3 className="text-gray-900 font-bold mb-4">Servizi</h3>
+        <div className="bg-orange-500 rounded-2xl p-6">
+          <h3 className="text-white font-bold mb-4">Servizi</h3>
           <ul className="space-y-2">
             {SERVIZI_NEGOZIO.map((s) => (
-              <li key={s} className="flex items-center gap-2 text-gray-600 text-sm">
-                <span className="text-brand-yellow">✓</span> {s}
+              <li key={s} className="flex items-center gap-2 text-white text-sm">
+                <span className="text-white">✓</span> {s}
               </li>
             ))}
           </ul>
         </div>
-        <div className="bg-white border border-gray-200 rounded-2xl p-6">
-          <h3 className="text-gray-900 font-bold mb-4">Accessibilità</h3>
+        <div className="bg-orange-500 rounded-2xl p-6">
+          <h3 className="text-white font-bold mb-4">Accessibilità</h3>
           <ul className="space-y-2">
             {ACCESSIBILITA.map((a) => (
-              <li key={a} className="flex items-center gap-2 text-gray-600 text-sm">
-                <span className="text-brand-yellow">✓</span> {a}
+              <li key={a} className="flex items-center gap-2 text-white text-sm">
+                <span className="text-white">✓</span> {a}
               </li>
             ))}
           </ul>
         </div>
-        <div className="bg-white border border-gray-200 rounded-2xl p-6">
-          <h3 className="text-gray-900 font-bold mb-4">Pagamenti accettati</h3>
+        <div className="bg-orange-500 rounded-2xl p-6">
+          <h3 className="text-white font-bold mb-4">Pagamenti accettati</h3>
           <ul className="space-y-2">
             {PAGAMENTI.map((p) => (
-              <li key={p} className="flex items-center gap-2 text-gray-600 text-sm">
-                <span className="text-brand-yellow">✓</span> {p}
+              <li key={p} className="flex items-center gap-2 text-white text-sm">
+                <span className="text-white">✓</span> {p}
               </li>
             ))}
           </ul>

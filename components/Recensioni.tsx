@@ -61,15 +61,15 @@ export default function Recensioni() {
         {RECENSIONI.map((r) => (
           <div
             key={r.nome}
-            className="bg-white border border-gray-200 rounded-2xl p-6 flex flex-col gap-4"
+            className="bg-white border border-gray-200 rounded-2xl p-6 flex flex-col gap-4 overflow-hidden"
           >
             <div className="text-yellow-400 text-lg tracking-wider">
               {"★".repeat(r.stelle)}
             </div>
             <p className="text-gray-700 text-sm leading-relaxed flex-1">{r.testo}</p>
-            <div className="flex justify-between items-center pt-3 border-t border-gray-200">
-              <span className="text-orange-400 text-sm font-semibold">{r.nome}</span>
-              <span className="text-gray-500 text-xs">{r.data}</span>
+            <div className="flex justify-between items-center -mx-6 -mb-6 px-6 pt-3 pb-4 bg-orange-50 border-t border-orange-200">
+              <span className="text-orange-600 text-sm font-semibold">{r.nome}</span>
+              <span className="text-orange-400 text-xs">{r.data}</span>
             </div>
           </div>
         ))}

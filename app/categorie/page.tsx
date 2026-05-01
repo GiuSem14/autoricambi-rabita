@@ -50,11 +50,11 @@ export default function CategoriePage() {
         ))}
       </div>
 
-      <div className="bg-white border border-gray-200 rounded-2xl p-10 text-center">
-        <h3 className="text-2xl font-bold text-gray-900 mb-3">
+      <div className="bg-orange-500 rounded-2xl p-10 text-center">
+        <h3 className="text-2xl font-bold text-white mb-3">
           Non trovi la categoria che cerchi?
         </h3>
-        <p className="text-gray-600 mb-6">
+        <p className="text-white mb-6">
           Contattaci direttamente: trattiamo ricambi per la maggior parte dei
           veicoli in circolazione. Se non lo abbiamo in stock, lo ordiniamo per te.
         </p>
