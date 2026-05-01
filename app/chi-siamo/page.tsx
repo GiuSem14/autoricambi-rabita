@@ -60,24 +60,24 @@ export default function ChiSiamoPage() {
       {/* Valori */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-16">
         {VALORI.map(({ titolo, desc, Icon }) => (
-          <div key={titolo} className="bg-[#222222] border border-gray-800 rounded-2xl p-6">
+          <div key={titolo} className="bg-white border border-gray-200 rounded-2xl p-6">
             <div className="w-10 h-10 bg-brand-yellow/10 rounded-xl flex items-center justify-center text-brand-yellow mb-3">
               <Icon />
             </div>
-            <h3 className="text-brand-white font-semibold text-lg mb-2">{titolo}</h3>
-            <p className="text-gray-400 text-sm">{desc}</p>
+            <h3 className="text-gray-900 font-semibold text-lg mb-2">{titolo}</h3>
+            <p className="text-gray-600 text-sm">{desc}</p>
           </div>
         ))}
       </div>
 
       {/* Orari */}
-      <div className="bg-[#111111] border border-gray-800 rounded-2xl p-8 mb-10">
-        <h2 className="text-xl font-bold text-brand-white mb-6">Orari di apertura</h2>
+      <div className="bg-white border border-gray-200 rounded-2xl p-8 mb-10">
+        <h2 className="text-xl font-bold text-gray-900 mb-6">Orari di apertura</h2>
         <ul className="space-y-3">
           {ORARI.map((o) => (
-            <li key={o.giorno} className="flex justify-between items-center border-b border-gray-800 pb-3 last:border-0 last:pb-0">
-              <span className="text-gray-400">{o.giorno}</span>
-              <span className="text-brand-white font-medium">{o.orario}</span>
+            <li key={o.giorno} className="flex justify-between items-center border-b border-gray-200 pb-3 last:border-0 last:pb-0">
+              <span className="text-gray-600">{o.giorno}</span>
+              <span className="text-gray-800 font-medium">{o.orario}</span>
             </li>
           ))}
         </ul>

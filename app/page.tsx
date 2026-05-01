@@ -111,21 +111,21 @@ export default function HomePage() {
       </section>
 
       {/* Statistiche */}
-      <section className="bg-[#091035] border-y border-white/5">
+      <section className="bg-white border-y border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             {STATS.map(({ valore, label, sub, Icon }) => (
               <div
                 key={label}
-                className="bg-brand-blue/10 border border-brand-yellow/15 rounded-2xl px-8 py-10 flex flex-col items-center text-center hover:border-brand-yellow/40 transition-colors"
+                className="bg-white border border-gray-200 rounded-2xl px-8 py-10 flex flex-col items-center text-center hover:border-brand-yellow/40 transition-colors"
               >
                 <div className="w-14 h-14 rounded-xl bg-brand-yellow/10 flex items-center justify-center text-brand-yellow mb-6">
                   <Icon />
                 </div>
-                <div className="text-5xl sm:text-6xl font-extrabold text-brand-white mb-3 leading-none tracking-tight">
+                <div className="text-5xl sm:text-6xl font-extrabold text-gray-900 mb-3 leading-none tracking-tight">
                   {valore}
                 </div>
-                <div className="text-brand-white font-semibold text-base mb-1">{label}</div>
+                <div className="text-gray-800 font-semibold text-base mb-1">{label}</div>
                 <div className="text-gray-500 text-sm">{sub}</div>
               </div>
             ))}
@@ -177,15 +177,15 @@ export default function HomePage() {
           {SERVIZI.map((s) => (
             <div
               key={s.titolo}
-              className="bg-[#222222] border border-gray-800 rounded-2xl p-8 hover:border-brand-yellow/40 transition-colors group"
+              className="bg-white border border-gray-200 rounded-2xl p-8 hover:border-brand-yellow/40 transition-colors group"
             >
               <div className="w-10 h-10 bg-brand-yellow/10 rounded-xl flex items-center justify-center text-brand-yellow mb-4">
                 <s.Icon />
               </div>
-              <h3 className="text-xl font-semibold text-brand-white group-hover:text-brand-yellow transition-colors mb-3">
+              <h3 className="text-xl font-semibold text-gray-900 group-hover:text-brand-yellow transition-colors mb-3">
                 {s.titolo}
               </h3>
-              <p className="text-gray-400 text-sm leading-relaxed">{s.descrizione}</p>
+              <p className="text-gray-600 text-sm leading-relaxed">{s.descrizione}</p>
             </div>
           ))}
         </div>
@@ -203,7 +203,7 @@ export default function HomePage() {
           {FILIALI.map((f) => (
             <div
               key={f.nome}
-              className="bg-[#111111] border border-gray-800 rounded-2xl overflow-hidden hover:border-brand-yellow/40 transition-colors"
+              className="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:border-brand-yellow/40 transition-colors"
             >
               <div className="h-52">
                 <iframe
@@ -218,25 +218,25 @@ export default function HomePage() {
                 />
               </div>
               <div className="p-6 space-y-3">
-                <h3 className="text-brand-white font-bold text-lg">{f.nome}</h3>
+                <h3 className="text-gray-900 font-bold text-lg">{f.nome}</h3>
                 <a
                   href={f.mapsLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-start gap-2 text-gray-400 text-sm hover:text-brand-yellow transition-colors group"
+                  className="flex items-start gap-2 text-gray-600 text-sm hover:text-brand-yellow transition-colors group"
                 >
                   <MapPinIcon />
                   <span className="group-hover:underline">{f.indirizzo}</span>
                 </a>
                 <a
                   href={`tel:${f.telefono.replace(/\s/g, "")}`}
-                  className="flex items-center gap-2 text-gray-400 text-sm hover:text-brand-yellow transition-colors"
+                  className="flex items-center gap-2 text-gray-600 text-sm hover:text-brand-yellow transition-colors"
                 >
                   <PhoneSmallIcon />
                   {f.telefono}
                 </a>
                 {f.orari && (
-                  <div className="flex items-center gap-2 text-gray-400 text-sm">
+                  <div className="flex items-center gap-2 text-gray-600 text-sm">
                     <ClockIcon />
                     {f.orari}
                   </div>

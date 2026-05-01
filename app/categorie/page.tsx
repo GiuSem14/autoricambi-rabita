@@ -37,24 +37,24 @@ export default function CategoriePage() {
         {CATEGORIE.map(({ nome, Icon, esempi }) => (
           <div
             key={nome}
-            className="bg-[#222222] border border-gray-800 rounded-2xl p-6 hover:border-brand-yellow/40 transition-colors group"
+            className="bg-white border border-gray-200 rounded-2xl p-6 hover:border-brand-yellow/40 transition-colors group"
           >
             <div className="w-10 h-10 bg-brand-yellow/10 rounded-xl flex items-center justify-center text-brand-yellow mb-3">
               <Icon />
             </div>
-            <h2 className="text-base font-semibold text-brand-white group-hover:text-brand-yellow transition-colors mb-2">
+            <h2 className="text-base font-semibold text-gray-900 group-hover:text-brand-yellow transition-colors mb-2">
               {nome}
             </h2>
-            <p className="text-gray-500 text-xs leading-relaxed">{esempi}</p>
+            <p className="text-gray-600 text-xs leading-relaxed">{esempi}</p>
           </div>
         ))}
       </div>
 
-      <div className="bg-[#111111] border border-gray-800 rounded-2xl p-10 text-center">
-        <h3 className="text-2xl font-bold text-brand-white mb-3">
+      <div className="bg-white border border-gray-200 rounded-2xl p-10 text-center">
+        <h3 className="text-2xl font-bold text-gray-900 mb-3">
           Non trovi la categoria che cerchi?
         </h3>
-        <p className="text-gray-400 mb-6">
+        <p className="text-gray-600 mb-6">
           Contattaci direttamente: trattiamo ricambi per la maggior parte dei
           veicoli in circolazione. Se non lo abbiamo in stock, lo ordiniamo per te.
         </p>

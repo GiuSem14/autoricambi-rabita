@@ -77,14 +77,14 @@ export default function ContattiPage() {
               </a>
             }
           />
-          <div className="bg-[#222222] border border-gray-800 rounded-2xl p-6">
+          <div className="bg-white border border-gray-200 rounded-2xl p-6">
             <div className="flex items-start gap-4">
               <div className="w-10 h-10 bg-[#25D366]/10 rounded-lg flex items-center justify-center flex-shrink-0">
                 <WhatsAppSmallIcon />
               </div>
               <div>
-                <div className="text-brand-white font-semibold mb-1">WhatsApp</div>
-                <div className="text-gray-400 text-sm mb-3">{MOBILE_NUMBER}</div>
+                <div className="text-gray-900 font-semibold mb-1">WhatsApp</div>
+                <div className="text-gray-600 text-sm mb-3">{MOBILE_NUMBER}</div>
                 <a
                   href={WHATSAPP_URL}
                   target="_blank"
@@ -99,24 +99,24 @@ export default function ContattiPage() {
         </div>
 
         {/* Orari */}
-        <div className="bg-[#111111] border border-gray-800 rounded-2xl p-8 h-fit">
-          <h2 className="text-xl font-bold text-brand-white mb-6">
+        <div className="bg-white border border-gray-200 rounded-2xl p-8 h-fit">
+          <h2 className="text-xl font-bold text-gray-900 mb-6">
             Orari di apertura
           </h2>
           <ul className="space-y-4">
             {ORARI.map((o) => (
               <li
                 key={o.giorno}
-                className="flex justify-between items-center border-b border-gray-800 pb-4 last:border-0 last:pb-0"
+                className="flex justify-between items-center border-b border-gray-200 pb-4 last:border-0 last:pb-0"
               >
-                <span className="text-gray-400">{o.giorno}</span>
-                <span className="text-brand-white font-medium text-right">
+                <span className="text-gray-600">{o.giorno}</span>
+                <span className="text-gray-800 font-medium text-right">
                   {o.orario}
                 </span>
               </li>
             ))}
           </ul>
-          <div className="mt-6 pt-6 border-t border-gray-800 rounded-xl p-4 bg-brand-yellow/5 border border-brand-yellow/20">
+          <div className="mt-6 pt-6 border-t border-gray-200 rounded-xl p-4 bg-brand-yellow/5 border border-brand-yellow/20">
             <div className="flex items-start gap-2 text-brand-yellow text-sm font-medium">
               <MessageIcon />
               <span>Fuori orario? Lascia un messaggio su WhatsApp e ti richiamiamo appena possibile.</span>
@@ -127,31 +127,31 @@ export default function ContattiPage() {
 
       {/* Servizi, Accessibilità, Pagamenti */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
-        <div className="bg-[#222222] border border-gray-800 rounded-2xl p-6">
-          <h3 className="text-brand-white font-bold mb-4">Servizi</h3>
+        <div className="bg-white border border-gray-200 rounded-2xl p-6">
+          <h3 className="text-gray-900 font-bold mb-4">Servizi</h3>
           <ul className="space-y-2">
             {SERVIZI_NEGOZIO.map((s) => (
-              <li key={s} className="flex items-center gap-2 text-gray-400 text-sm">
+              <li key={s} className="flex items-center gap-2 text-gray-600 text-sm">
                 <span className="text-brand-yellow">✓</span> {s}
               </li>
             ))}
           </ul>
         </div>
-        <div className="bg-[#222222] border border-gray-800 rounded-2xl p-6">
-          <h3 className="text-brand-white font-bold mb-4">Accessibilità</h3>
+        <div className="bg-white border border-gray-200 rounded-2xl p-6">
+          <h3 className="text-gray-900 font-bold mb-4">Accessibilità</h3>
           <ul className="space-y-2">
             {ACCESSIBILITA.map((a) => (
-              <li key={a} className="flex items-center gap-2 text-gray-400 text-sm">
+              <li key={a} className="flex items-center gap-2 text-gray-600 text-sm">
                 <span className="text-brand-yellow">✓</span> {a}
               </li>
             ))}
           </ul>
         </div>
-        <div className="bg-[#222222] border border-gray-800 rounded-2xl p-6">
-          <h3 className="text-brand-white font-bold mb-4">Pagamenti accettati</h3>
+        <div className="bg-white border border-gray-200 rounded-2xl p-6">
+          <h3 className="text-gray-900 font-bold mb-4">Pagamenti accettati</h3>
           <ul className="space-y-2">
             {PAGAMENTI.map((p) => (
-              <li key={p} className="flex items-center gap-2 text-gray-400 text-sm">
+              <li key={p} className="flex items-center gap-2 text-gray-600 text-sm">
                 <span className="text-brand-yellow">✓</span> {p}
               </li>
             ))}
@@ -186,13 +186,13 @@ function ContactCard({
   contenuto: React.ReactNode;
 }) {
   return (
-    <div className="bg-[#222222] border border-gray-800 rounded-2xl p-6 flex items-start gap-4">
+    <div className="bg-white border border-gray-200 rounded-2xl p-6 flex items-start gap-4">
       <div className="w-10 h-10 bg-brand-yellow/10 rounded-lg flex items-center justify-center flex-shrink-0 text-brand-yellow">
         {icon}
       </div>
       <div>
-        <div className="text-brand-white font-semibold mb-1">{titolo}</div>
-        <div className="text-gray-400 text-sm">{contenuto}</div>
+        <div className="text-gray-900 font-semibold mb-1">{titolo}</div>
+        <div className="text-gray-600 text-sm">{contenuto}</div>
       </div>
     </div>
   );
