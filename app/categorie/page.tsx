@@ -69,7 +69,7 @@ export default function CategoriePage() {
           </a>
           <Link
             href="/cerca-ricambio"
-            className="inline-flex items-center justify-center border border-brand-yellow text-brand-yellow hover:bg-brand-yellow hover:text-brand-black font-bold px-6 py-3 rounded-xl transition-all"
+            className="inline-flex items-center justify-center bg-white text-brand-yellow hover:bg-white/90 font-bold px-6 py-3 rounded-xl transition-all"
           >
             Usa il modulo di ricerca
           </Link>
