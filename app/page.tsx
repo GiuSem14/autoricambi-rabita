@@ -112,12 +112,12 @@ export default function HomePage() {
 
       {/* Statistiche */}
       <section className="bg-brand-yellow">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             {STATS.map(({ valore, label, sub, Icon }) => (
               <div
                 key={label}
-                className="bg-white border border-gray-200 rounded-2xl px-8 py-10 flex flex-col items-center text-center hover:border-brand-yellow/40 transition-colors"
+                className="bg-white border border-gray-200 rounded-2xl px-8 py-5 flex flex-col items-center text-center hover:border-brand-yellow/40 transition-colors"
               >
                 <div className="w-14 h-14 rounded-xl bg-brand-yellow/10 flex items-center justify-center text-brand-yellow mb-6">
                   <Icon />
