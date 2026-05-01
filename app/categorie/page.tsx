@@ -50,7 +50,7 @@ export default function CategoriePage() {
         ))}
       </div>
 
-      <div className="bg-orange-500 rounded-2xl p-10 text-center">
+      <div className="bg-brand-yellow rounded-2xl p-10 text-center">
         <h3 className="text-2xl font-bold text-white mb-3">
           Non trovi la categoria che cerchi?
         </h3>

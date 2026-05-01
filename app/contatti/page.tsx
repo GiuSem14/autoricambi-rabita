@@ -127,7 +127,7 @@ export default function ContattiPage() {
 
       {/* Servizi, Accessibilità, Pagamenti */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
-        <div className="bg-orange-500 rounded-2xl p-6">
+        <div className="bg-brand-yellow rounded-2xl p-6">
           <h3 className="text-white font-bold mb-4">Servizi</h3>
           <ul className="space-y-2">
             {SERVIZI_NEGOZIO.map((s) => (
@@ -137,7 +137,7 @@ export default function ContattiPage() {
             ))}
           </ul>
         </div>
-        <div className="bg-orange-500 rounded-2xl p-6">
+        <div className="bg-brand-yellow rounded-2xl p-6">
           <h3 className="text-white font-bold mb-4">Accessibilità</h3>
           <ul className="space-y-2">
             {ACCESSIBILITA.map((a) => (
@@ -147,7 +147,7 @@ export default function ContattiPage() {
             ))}
           </ul>
         </div>
-        <div className="bg-orange-500 rounded-2xl p-6">
+        <div className="bg-brand-yellow rounded-2xl p-6">
           <h3 className="text-white font-bold mb-4">Pagamenti accettati</h3>
           <ul className="space-y-2">
             {PAGAMENTI.map((p) => (

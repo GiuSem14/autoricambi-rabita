@@ -111,7 +111,7 @@ export default function HomePage() {
       </section>
 
       {/* Statistiche */}
-      <section className="bg-orange-500">
+      <section className="bg-brand-yellow">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             {STATS.map(({ valore, label, sub, Icon }) => (
@@ -248,7 +248,7 @@ export default function HomePage() {
       </section>
 
       {/* CTA finale */}
-      <section className="bg-orange-500">
+      <section className="bg-brand-yellow">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
             Hai bisogno di un ricambio?
@@ -269,7 +269,7 @@ export default function HomePage() {
             </a>
             <Link
               href="/cerca-ricambio"
-              className="inline-flex items-center justify-center border-2 border-white text-white hover:bg-white hover:text-orange-500 font-bold px-8 py-4 rounded-xl transition-all"
+              className="inline-flex items-center justify-center border-2 border-white text-white hover:bg-white hover:text-brand-yellow font-bold px-8 py-4 rounded-xl transition-all"
             >
               Usa il modulo
             </Link>

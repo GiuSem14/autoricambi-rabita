@@ -71,11 +71,11 @@ export default function ChiSiamoPage() {
       </div>
 
       {/* Orari */}
-      <div className="bg-orange-500 rounded-2xl p-8 mb-10">
+      <div className="bg-brand-yellow rounded-2xl p-8 mb-10">
         <h2 className="text-xl font-bold text-white mb-6">Orari di apertura</h2>
         <ul className="space-y-3">
           {ORARI.map((o) => (
-            <li key={o.giorno} className="flex justify-between items-center border-b border-orange-400 pb-3 last:border-0 last:pb-0">
+            <li key={o.giorno} className="flex justify-between items-center border-b border-red-400 pb-3 last:border-0 last:pb-0">
               <span className="text-white">{o.giorno}</span>
               <span className="text-white font-medium">{o.orario}</span>
             </li>
