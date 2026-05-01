@@ -112,21 +112,15 @@ export default function HomePage() {
 
       {/* Statistiche */}
       <section className="bg-brand-yellow">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-            {STATS.map(({ valore, label, sub, Icon }) => (
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
+          <div className="flex flex-row">
+            {STATS.map(({ valore, label }, i) => (
               <div
                 key={label}
-                className="bg-white border border-gray-200 rounded-2xl px-8 py-5 flex flex-col items-center text-center hover:border-brand-yellow/40 transition-colors"
+                className={`flex-1 flex flex-col items-center justify-center text-center py-1 ${i < STATS.length - 1 ? "border-r border-white/20" : ""}`}
               >
-                <div className="w-14 h-14 rounded-xl bg-brand-yellow/10 flex items-center justify-center text-brand-yellow mb-6">
-                  <Icon />
-                </div>
-                <div className="text-5xl sm:text-6xl font-extrabold text-gray-900 mb-3 leading-none tracking-tight">
-                  {valore}
-                </div>
-                <div className="text-gray-800 font-semibold text-base mb-1">{label}</div>
-                <div className="text-gray-500 text-sm">{sub}</div>
+                <div className="text-4xl font-extrabold text-white leading-none">{valore}</div>
+                <div className="text-white/80 text-sm mt-1">{label}</div>
               </div>
             ))}
           </div>
