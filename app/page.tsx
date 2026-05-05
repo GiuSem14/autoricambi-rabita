@@ -60,9 +60,6 @@ export default function HomePage() {
           <div className="flex flex-col md:flex-row gap-12 items-center">
             {/* Colonna sinistra */}
             <div className="w-full md:w-[60%] text-center md:text-left">
-              <span className="inline-block bg-brand-yellow/10 border border-brand-yellow/30 text-brand-yellow text-xs font-semibold px-3 py-1 rounded-full mb-6 uppercase tracking-widest">
-                Barrafranca e Piazza Armerina
-              </span>
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-brand-white leading-tight mb-6">
                 Ricambi auto a{" "}
                 <span className="text-brand-yellow">Barrafranca e Piazza Armerina</span>{" "}
@@ -100,10 +97,7 @@ export default function HomePage() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="flex flex-col md:flex-row gap-10 items-center">
           <div className="w-full md:w-[40%]">
-            <span className="text-brand-yellow text-sm font-semibold uppercase tracking-widest">
-              Chi siamo
-            </span>
-            <h2 className="text-3xl font-bold text-brand-white mt-2 mb-6">
+            <h2 className="text-3xl font-bold text-brand-white mb-6">
               Il nostro negozio
             </h2>
             <div className="space-y-4 text-gray-400 text-base leading-relaxed">
