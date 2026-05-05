@@ -10,11 +10,8 @@ export const metadata: Metadata = {
 export default function CercaRicambioPage() {
   return (
     <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      <div className="mb-10">
-        <span className="text-brand-yellow text-sm font-semibold uppercase tracking-widest">
-          Richiesta rapida
-        </span>
-        <h1 className="text-4xl font-extrabold text-brand-white mt-2 mb-4">
+      <div className="mb-10 text-center">
+        <h1 className="text-4xl font-extrabold text-brand-white mb-4">
           Cerca il tuo ricambio
         </h1>
         <p className="text-gray-400 text-lg">

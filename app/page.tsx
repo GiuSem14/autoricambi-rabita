@@ -56,36 +56,41 @@ export default function HomePage() {
       {/* Hero */}
       <section className="relative bg-brand-black overflow-hidden min-h-[500px] md:min-h-[600px] flex items-center">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_rgba(232,32,26,0.08),_transparent_60%)]" />
-        <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-36 text-center">
-          <span className="inline-block bg-brand-yellow/10 border border-brand-yellow/30 text-brand-yellow text-xs font-semibold px-3 py-1 rounded-full mb-6 uppercase tracking-widest">
-            Barrafranca e Piazza Armerina
-          </span>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-brand-white leading-tight mb-6">
-            Ricambi auto a{" "}
-            <span className="text-brand-yellow">Barrafranca e Piazza Armerina</span>
-            <br className="hidden sm:block" /> disponibili subito
-            <br className="hidden sm:block" /> o su ordinazione
-          </h1>
-          <p className="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto mb-10">
-            Evita attese inutili. Contattaci su WhatsApp indicando marca, modello e anno:
-            verifichiamo la disponibilità in tempo reale e prepariamo il tuo ordine anche per il ritiro in giornata.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href={WHATSAPP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-3 bg-[#25D366] hover:bg-green-500 text-white font-bold px-8 py-4 rounded-xl text-lg transition-all shadow-lg"
-            >
-              <WhatsAppIcon />
-              Chiedi ai nostri esperti
-            </a>
-            <Link
-              href="/cerca-ricambio"
-              className="inline-flex items-center justify-center bg-brand-yellow hover:opacity-90 text-white font-bold px-8 py-4 rounded-xl text-lg transition-all shadow-lg"
-            >
-              Cerca il tuo ricambio
-            </Link>
+        <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-36">
+          <div className="flex flex-col md:flex-row gap-12 items-center">
+            {/* Colonna sinistra */}
+            <div className="w-full md:w-[60%] text-center md:text-left">
+              <span className="inline-block bg-brand-yellow/10 border border-brand-yellow/30 text-brand-yellow text-xs font-semibold px-3 py-1 rounded-full mb-6 uppercase tracking-widest">
+                Barrafranca e Piazza Armerina
+              </span>
+              <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-brand-white leading-tight mb-6">
+                Ricambi auto a{" "}
+                <span className="text-brand-yellow">Barrafranca e Piazza Armerina</span>{" "}
+                disponibili subito o su ordinazione
+              </h1>
+              <p className="text-lg sm:text-xl text-gray-400">
+                Evita attese inutili. Contattaci su WhatsApp indicando marca, modello e anno:
+                verifichiamo la disponibilità in tempo reale e prepariamo il tuo ordine anche per il ritiro in giornata.
+              </p>
+            </div>
+            {/* Colonna destra */}
+            <div className="w-full md:w-[40%] flex flex-col gap-4">
+              <a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-3 bg-[#25D366] hover:bg-green-500 text-white font-bold px-8 py-5 rounded-xl text-xl transition-all shadow-lg w-full"
+              >
+                <WhatsAppIcon />
+                Chiedi ai nostri esperti
+              </a>
+              <Link
+                href="/cerca-ricambio"
+                className="inline-flex items-center justify-center bg-brand-yellow hover:opacity-90 text-white font-bold px-8 py-5 rounded-xl text-xl transition-all shadow-lg w-full"
+              >
+                Cerca il tuo ricambio
+              </Link>
+            </div>
           </div>
         </div>
       </section>
