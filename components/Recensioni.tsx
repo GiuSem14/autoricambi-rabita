@@ -37,7 +37,7 @@ const RECENSIONI = [
   },
 ];
 
-const GOOGLE_REVIEW_URL = "https://www.google.com/maps/place/Autoricambi+Rabita/@37.4063,14.3706,17z/data=!4m8!3m7!1s0x13111f854e4982cb:0x4aee4521940d5e86!8m2!3d37.4063!4d14.3706!9m1!1b1&reviews";
+const GOOGLE_REVIEW_URL = "https://www.google.com/search?sca_esv=251dd46310ce0ad5&rlz=1C1HKFL_itIT1209IT1209&sxsrf=ANbL-n5PjnAZ-EyROiTcyGpVqdEy-yaniA:1778016292960&q=autoricambi+rabita&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qOVgUPqTKNNNr33Tr0TaCjB-bIwVO9EutjsEsukVofQwIjktgVMR5cIkZ6V7935Hu6_2vvIc%3D&uds=ALYpb_myr09fc72P8O-r9QptxpsdZHtuCG48sEW0MNoFuTxlOlOZz8MisyAIHfin9rqPWKLgSdGJMbZBsD-wZj-0YyeSkh8vMIWurwsy_b-fGlHqSdtJhrA&sa=X&ved=2ahUKEwiQza_siqOUAxVIhv0HHdwwAiEQ3PALegQIGhAE&cshid=1778016377084300&biw=1536&bih=730&dpr=1.25";
 
 export default function Recensioni() {
   return (
