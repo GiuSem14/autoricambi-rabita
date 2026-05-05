@@ -98,45 +98,6 @@ export default function ContattiPage() {
         </div>
       </div>
 
-      {/* Le nostre sedi */}
-      <div className="mb-8">
-        <h2 className="text-2xl font-bold text-brand-white mb-6">Le nostre sedi</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div>
-            <p className="text-gray-900 font-semibold mb-1">Barrafranca</p>
-            <p className="text-gray-600 text-sm mb-3">Via dello Stadio, 46, 94012 Barrafranca (EN)</p>
-            <div className="h-64 rounded-2xl overflow-hidden">
-              <iframe
-                src="https://maps.google.com/maps?q=Via+dello+Stadio+46+Barrafranca&output=embed"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Autoricambi Rabita – Barrafranca"
-              />
-            </div>
-          </div>
-          <div>
-            <p className="text-gray-900 font-semibold mb-1">Piazza Armerina</p>
-            <p className="text-gray-600 text-sm mb-3">Via Alessandro Manzoni, 143, 94015 Piazza Armerina (EN)</p>
-            <div className="h-64 rounded-2xl overflow-hidden">
-              <iframe
-                src="https://maps.google.com/maps?q=Via+Alessandro+Manzoni+143+Piazza+Armerina&output=embed"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Autoricambi Rabita – Piazza Armerina"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-
       {/* Servizi, Accessibilità, Pagamenti */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
         <div className="bg-white border border-orange-300 rounded-2xl p-6">
@@ -168,6 +129,45 @@ export default function ContattiPage() {
               </li>
             ))}
           </ul>
+        </div>
+      </div>
+
+      {/* Le nostre sedi */}
+      <div className="mt-8">
+        <h2 className="text-2xl font-bold text-brand-white mb-6">Le nostre sedi</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <p className="text-brand-red font-semibold mb-1">Barrafranca</p>
+            <p className="text-white text-sm mb-3">Via dello Stadio, 46, 94012 Barrafranca (EN)</p>
+            <div className="h-64 rounded-2xl overflow-hidden">
+              <iframe
+                src="https://maps.google.com/maps?q=Via+dello+Stadio+46+Barrafranca&output=embed"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Autoricambi Rabita – Barrafranca"
+              />
+            </div>
+          </div>
+          <div>
+            <p className="text-brand-red font-semibold mb-1">Piazza Armerina</p>
+            <p className="text-white text-sm mb-3">Via Alessandro Manzoni, 143, 94015 Piazza Armerina (EN)</p>
+            <div className="h-64 rounded-2xl overflow-hidden">
+              <iframe
+                src="https://maps.google.com/maps?q=Via+Alessandro+Manzoni+143+Piazza+Armerina&output=embed"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Autoricambi Rabita – Piazza Armerina"
+              />
+            </div>
+          </div>
         </div>
       </div>
 
