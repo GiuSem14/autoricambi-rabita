@@ -37,7 +37,7 @@ const RECENSIONI = [
   },
 ];
 
-const GOOGLE_REVIEW_URL = "https://g.page/r/autoricambi-rabita/review";
+const GOOGLE_REVIEW_URL = "https://www.google.com/maps/place/Autoricambi+Rabita/@37.3779,14.2089,17z/data=!4m8!3m7!1s0x13111f854e4982cb:0x4aee4521940d5e86!8m2!3d37.3779!4d14.2089!9m1!1b1";
 
 export default function Recensioni() {
   return (
