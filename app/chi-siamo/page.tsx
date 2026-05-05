@@ -29,12 +29,9 @@ const VALORI = [
 export default function ChiSiamoPage() {
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      <div className="mb-14">
-        <span className="text-brand-yellow text-sm font-semibold uppercase tracking-widest">
+      <div className="mb-14 text-center">
+        <h1 className="text-4xl font-extrabold text-white mb-6">
           La nostra storia
-        </span>
-        <h1 className="text-4xl font-extrabold text-brand-white mt-2 mb-6">
-          Il tuo punto di riferimento per i ricambi auto
         </h1>
         <div className="space-y-5 text-gray-300 text-lg leading-relaxed max-w-3xl">
           <p>

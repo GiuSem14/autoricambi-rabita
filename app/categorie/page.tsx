@@ -22,10 +22,7 @@ export default function CategoriePage() {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       <div className="text-center mb-14">
-        <span className="text-brand-yellow text-sm font-semibold uppercase tracking-widest">
-          Cosa trovi da noi
-        </span>
-        <h1 className="text-4xl font-extrabold text-brand-white mt-2 mb-4">
+        <h1 className="text-4xl font-extrabold text-brand-white mb-4">
           Categorie di ricambi
         </h1>
         <p className="text-gray-400 text-lg max-w-2xl mx-auto">

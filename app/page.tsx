@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { WHATSAPP_URL, FULL_ADDRESS, PHONE_NUMBER } from "@/lib/constants";
 import Recensioni from "@/components/Recensioni";
 
@@ -95,8 +96,8 @@ export default function HomePage() {
 
       {/* About */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="flex flex-col md:flex-row gap-10 items-center">
-          <div className="w-full md:w-[40%]">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+          <div>
             <h2 className="text-3xl font-bold text-brand-white mb-6">
               Il nostro negozio
             </h2>
@@ -121,6 +122,14 @@ export default function HomePage() {
             >
               Scopri di più →
             </Link>
+          </div>
+          <div className="relative w-full aspect-[4/3]">
+            <Image
+              src="/images/negozio.png"
+              alt="Il nostro negozio Autoricambi Rabita"
+              fill
+              className="rounded-2xl object-cover"
+            />
           </div>
         </div>
       </section>
