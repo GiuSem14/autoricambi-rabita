@@ -30,10 +30,10 @@ export default function ChiSiamoPage() {
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       <div className="mb-14 text-center">
-        <h1 className="text-4xl font-extrabold text-white mb-6">
+        <h1 className="text-4xl font-extrabold text-brand-red mb-6">
           La nostra storia
         </h1>
-        <div className="space-y-5 text-gray-300 text-lg leading-relaxed max-w-3xl">
+        <div className="space-y-5 text-gray-300 text-lg leading-relaxed max-w-3xl mx-auto text-center">
           <p>
             <strong className="text-brand-white">{BUSINESS_NAME}</strong> è da anni il punto
             di riferimento per i ricambi auto a {CITY} e nella provincia di Enna.

@@ -20,7 +20,7 @@ export default function ContattiPage() {
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       <div className="mb-12 text-center">
-        <h1 className="text-4xl font-extrabold text-brand-white mb-4">
+        <h1 className="text-4xl font-extrabold text-brand-red mb-4">
           Contatti
         </h1>
         <p className="text-gray-400 text-lg">
@@ -31,7 +31,7 @@ export default function ContattiPage() {
 
       {/* Sezione 1: 3 card contatti */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-8">
-        <div className="bg-gradient-to-br from-white to-red-50 rounded-2xl p-6 flex flex-col gap-3 shadow-[0_4px_20px_rgba(220,38,38,0.12)]">
+        <div className="bg-gradient-to-br from-white to-red-50/40 border border-brand-red/30 hover:border-brand-red/60 transition-colors rounded-2xl p-6 flex flex-col gap-3">
           <div className="w-10 h-10 bg-brand-red/10 rounded-lg flex items-center justify-center text-brand-red">
             <MapPinIcon />
           </div>
@@ -41,7 +41,7 @@ export default function ContattiPage() {
           </div>
         </div>
 
-        <div className="bg-gradient-to-br from-white to-red-50 rounded-2xl p-6 flex flex-col gap-3 shadow-[0_4px_20px_rgba(220,38,38,0.12)]">
+        <div className="bg-gradient-to-br from-white to-red-50/40 border border-brand-red/30 hover:border-brand-red/60 transition-colors rounded-2xl p-6 flex flex-col gap-3">
           <div className="w-10 h-10 bg-brand-red/10 rounded-lg flex items-center justify-center text-brand-red">
             <PhoneIcon />
           </div>
@@ -62,7 +62,7 @@ export default function ContattiPage() {
           </div>
         </div>
 
-        <div className="bg-gradient-to-br from-white to-red-50 rounded-2xl p-6 flex flex-col gap-3 shadow-[0_4px_20px_rgba(220,38,38,0.12)]">
+        <div className="bg-gradient-to-br from-white to-red-50/40 border border-brand-red/30 hover:border-brand-red/60 transition-colors rounded-2xl p-6 flex flex-col gap-3">
           <div className="w-10 h-10 bg-brand-red/10 rounded-lg flex items-center justify-center text-brand-red">
             <EmailIcon />
           </div>
@@ -100,7 +100,7 @@ export default function ContattiPage() {
 
       {/* Servizi, Accessibilità, Pagamenti */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-        <div className="bg-gradient-to-br from-white to-red-50 rounded-2xl p-6 shadow-[0_4px_20px_rgba(220,38,38,0.12)]">
+        <div className="bg-gradient-to-br from-white to-red-50/40 border border-brand-red/30 hover:border-brand-red/60 transition-colors rounded-2xl p-6">
           <h3 className="text-brand-red font-bold mb-4">Servizi</h3>
           <ul className="space-y-2">
             {SERVIZI_NEGOZIO.map((s) => (
@@ -110,7 +110,7 @@ export default function ContattiPage() {
             ))}
           </ul>
         </div>
-        <div className="bg-gradient-to-br from-white to-red-50 rounded-2xl p-6 shadow-[0_4px_20px_rgba(220,38,38,0.12)]">
+        <div className="bg-gradient-to-br from-white to-red-50/40 border border-brand-red/30 hover:border-brand-red/60 transition-colors rounded-2xl p-6">
           <h3 className="text-brand-red font-bold mb-4">Accessibilità</h3>
           <ul className="space-y-2">
             {ACCESSIBILITA.map((a) => (
@@ -120,7 +120,7 @@ export default function ContattiPage() {
             ))}
           </ul>
         </div>
-        <div className="bg-gradient-to-br from-white to-red-50 rounded-2xl p-6 shadow-[0_4px_20px_rgba(220,38,38,0.12)]">
+        <div className="bg-gradient-to-br from-white to-red-50/40 border border-brand-red/30 hover:border-brand-red/60 transition-colors rounded-2xl p-6">
           <h3 className="text-brand-red font-bold mb-4">Pagamenti accettati</h3>
           <ul className="space-y-2">
             {PAGAMENTI.map((p) => (

@@ -22,7 +22,7 @@ export default function CategoriePage() {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       <div className="text-center mb-14">
-        <h1 className="text-4xl font-extrabold text-brand-white mb-4">
+        <h1 className="text-4xl font-extrabold text-brand-red mb-4">
           Categorie di ricambi
         </h1>
         <p className="text-gray-400 text-lg max-w-2xl mx-auto">
@@ -30,19 +30,21 @@ export default function CategoriePage() {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-16">
         {CATEGORIE.map(({ nome, Icon, esempi }) => (
           <div
             key={nome}
-            className="bg-white border border-gray-200 rounded-2xl p-6 hover:border-brand-yellow/40 transition-colors group"
+            className="bg-white border border-gray-100 rounded-2xl p-5 flex flex-row items-center gap-4 shadow-sm hover:shadow-md hover:border-brand-red/20 transition-all group"
           >
-            <div className="w-10 h-10 bg-brand-yellow/10 rounded-xl flex items-center justify-center text-brand-yellow mb-3">
+            <div className="w-14 h-14 flex-shrink-0 bg-brand-red rounded-xl flex items-center justify-center text-white">
               <Icon />
             </div>
-            <h2 className="text-base font-semibold text-gray-900 group-hover:text-brand-yellow transition-colors mb-2">
-              {nome}
-            </h2>
-            <p className="text-gray-600 text-xs leading-relaxed">{esempi}</p>
+            <div>
+              <h2 className="text-base font-semibold text-gray-900 group-hover:text-brand-red transition-colors mb-1">
+                {nome}
+              </h2>
+              <p className="text-gray-500 text-xs leading-relaxed">{esempi}</p>
+            </div>
           </div>
         ))}
       </div>
