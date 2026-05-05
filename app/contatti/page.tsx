@@ -34,46 +34,46 @@ export default function ContattiPage() {
 
       {/* Sezione 1: 3 card contatti */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-8">
-        <div className="bg-brand-yellow rounded-2xl p-6 flex flex-col gap-3">
-          <div className="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center text-white">
+        <div className="bg-white border-2 border-brand-red rounded-2xl p-6 flex flex-col gap-3">
+          <div className="w-10 h-10 bg-brand-red/10 rounded-lg flex items-center justify-center text-brand-red">
             <MapPinIcon />
           </div>
           <div>
-            <div className="text-white font-semibold mb-1">Indirizzo</div>
-            <div className="text-white/80 text-sm">{FULL_ADDRESS}</div>
+            <div className="text-brand-red font-semibold mb-1">Indirizzo</div>
+            <div className="text-gray-700 text-sm">{FULL_ADDRESS}</div>
           </div>
         </div>
 
-        <div className="bg-brand-yellow rounded-2xl p-6 flex flex-col gap-3">
-          <div className="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center text-white">
+        <div className="bg-white border-2 border-brand-red rounded-2xl p-6 flex flex-col gap-3">
+          <div className="w-10 h-10 bg-brand-red/10 rounded-lg flex items-center justify-center text-brand-red">
             <PhoneIcon />
           </div>
           <div>
-            <div className="text-white font-semibold mb-1">Telefono</div>
+            <div className="text-brand-red font-semibold mb-1">Telefono</div>
             <a
               href="tel:0934464038"
-              className="block text-white/80 text-sm hover:text-white transition-colors"
+              className="block text-gray-700 text-sm hover:text-brand-red transition-colors"
             >
               {PHONE_NUMBER}
             </a>
             <a
               href="tel:+393505011449"
-              className="block text-white/80 text-sm hover:text-white transition-colors mt-1"
+              className="block text-gray-700 text-sm hover:text-brand-red transition-colors mt-1"
             >
               {MOBILE_NUMBER}
             </a>
           </div>
         </div>
 
-        <div className="bg-brand-yellow rounded-2xl p-6 flex flex-col gap-3">
-          <div className="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center text-white">
+        <div className="bg-white border-2 border-brand-red rounded-2xl p-6 flex flex-col gap-3">
+          <div className="w-10 h-10 bg-brand-red/10 rounded-lg flex items-center justify-center text-brand-red">
             <EmailIcon />
           </div>
           <div>
-            <div className="text-white font-semibold mb-1">Email</div>
+            <div className="text-brand-red font-semibold mb-1">Email</div>
             <a
               href={`mailto:${EMAIL}`}
-              className="text-white/80 text-sm hover:text-white transition-colors"
+              className="text-gray-700 text-sm hover:text-brand-red transition-colors"
             >
               {EMAIL}
             </a>
@@ -103,32 +103,32 @@ export default function ContattiPage() {
 
       {/* Servizi, Accessibilità, Pagamenti */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-        <div className="bg-brand-yellow rounded-2xl p-6">
-          <h3 className="text-white font-bold mb-4">Servizi</h3>
+        <div className="bg-white border-2 border-brand-red rounded-2xl p-6">
+          <h3 className="text-brand-red font-bold mb-4">Servizi</h3>
           <ul className="space-y-2">
             {SERVIZI_NEGOZIO.map((s) => (
-              <li key={s} className="flex items-center gap-2 text-white text-sm">
-                <span className="text-white">✓</span> {s}
+              <li key={s} className="flex items-center gap-2 text-gray-700 text-sm">
+                <span className="text-brand-red">✓</span> {s}
               </li>
             ))}
           </ul>
         </div>
-        <div className="bg-brand-yellow rounded-2xl p-6">
-          <h3 className="text-white font-bold mb-4">Accessibilità</h3>
+        <div className="bg-white border-2 border-brand-red rounded-2xl p-6">
+          <h3 className="text-brand-red font-bold mb-4">Accessibilità</h3>
           <ul className="space-y-2">
             {ACCESSIBILITA.map((a) => (
-              <li key={a} className="flex items-center gap-2 text-white text-sm">
-                <span className="text-white">✓</span> {a}
+              <li key={a} className="flex items-center gap-2 text-gray-700 text-sm">
+                <span className="text-brand-red">✓</span> {a}
               </li>
             ))}
           </ul>
         </div>
-        <div className="bg-brand-yellow rounded-2xl p-6">
-          <h3 className="text-white font-bold mb-4">Pagamenti accettati</h3>
+        <div className="bg-white border-2 border-brand-red rounded-2xl p-6">
+          <h3 className="text-brand-red font-bold mb-4">Pagamenti accettati</h3>
           <ul className="space-y-2">
             {PAGAMENTI.map((p) => (
-              <li key={p} className="flex items-center gap-2 text-white text-sm">
-                <span className="text-white">✓</span> {p}
+              <li key={p} className="flex items-center gap-2 text-gray-700 text-sm">
+                <span className="text-brand-red">✓</span> {p}
               </li>
             ))}
           </ul>
