@@ -1,36 +1,28 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Autoricambi Rabita
 
-## Getting Started
+Website for a car-parts shop in Barrafranca (Sicily, Italy). Second client built on the same codebase as autoricambi-saitta.
 
-First, run the development server:
+Stack
 
-```bash
+Next.js 14 (App Router) · TypeScript · Tailwind CSS · deployed on Vercel
+
+Why two repositories instead of one
+
+Local businesses in the same trade need the same site with different content — not a different site. So the component set, page structure and part-request flow are shared, and everything that differs between clients lives in a single file: lib/constants.ts holds the business name, address, phone numbers, WhatsApp number, opening hours, payment methods and accessibility details.
+
+A new shop means editing one config file and replacing the images. The first build took weeks; this one took days.
+
+The tradeoff is that the two repositories drift over time — a fix in one does not reach the other automatically. For two clients that is cheaper than the machinery a shared package would require; past a handful, it would not be.
+
+What it does
+Part request flow — a form collects brand, model and year, then opens WhatsApp with the message pre-filled.
+GDPR cookie management — consent banner plus a reopenable preferences manager.
+SEO — per-page metadata, Open Graph tags, generated sitemap.ts, aimed at local search.
+Structure
+app/          App Router pages (home, cerca-ricambio, categorie, chi-siamo, contatti, policies)
+components/   Header, Footer, part-request form, cookie banner and manager, reviews
+lib/          constants.ts — every client-specific value in one place
+Running locally
+bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
